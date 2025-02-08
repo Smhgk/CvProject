@@ -10,6 +10,8 @@ CvProject ASP.Net Core ile geliştirmiş olduğum kişilerin kendi öz geçmişl
 
 -Projede ORM olarak Entity Framework Core kullanılmış olup Db-First yaklaşım benimsenmiştir.
 
+-Arayüz tarafında bazı kısımlarda hazır template'lerden faydalanılmıştır.
+
 CV SAYFASI:
 
 ![image](https://github.com/user-attachments/assets/a2a1e329-1c82-4946-b72a-1041b961f935)
