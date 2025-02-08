@@ -1,0 +1,36 @@
+﻿@model TblEgitimler
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Eğitim Ekle</h2>
+<br />
+<form asp-action="EgitimEkle" asp-controller="Egitim" method="post">
+    <div>
+        <label asp-for="Baslik" class="form-label">Başlık</label>
+        <input asp-for="Baslik" class="form-control" placeholder="Başlığı Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="AltBaslik1" class="form-label">Alt Başlık 1</label>
+        <input asp-for="AltBaslik1" class="form-control" placeholder="Alt Başlık 1 Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="AltBaslik2" class="form-label">Alt Başlık 2</label>
+        <input asp-for="AltBaslik2" class="form-control" placeholder="Alt Başlık 2 Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Gpa" class="form-label">GPA</label>
+        <input asp-for="Gpa" class="form-control" placeholder="GPA Giriniz..">
+    </div>
+    <br />
+    <div>
+        <label asp-for="Tarih" class="form-label">Tarih</label>
+        <input asp-for="Tarih" class="form-control" placeholder="Tarih Giriniz..">
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+

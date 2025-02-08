@@ -1,0 +1,80 @@
+﻿@model List<TblSosyalMedya>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Sosyal Medya Hesap Listem</h3>
+                                <br />
+                            </div>
+                            <div class="card-body">
+                                <button data-toggle="modal" data-target="#Modal1" class="btn btn-info">Yeni Sosyal Medya Hesabı Ekle</button>
+                                <br />
+                                <br />
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Sosyal Medya</th>
+                                            <th style="width: 125px">Düzenle</th>
+                                            <th style="width: 90px">Sil</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.Ad</td>
+                                                <td><a href="/SosyalMedya/SosyalMedyaGetir/@item.Id" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> Düzenle</a></td>
+                                                <td><a href="/SosyalMedya/SosyalMedyaSil/@item.Id" class="btn btn-danger"> <i class="fas fa-trash"></i> Sil</a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal" id="Modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Yeni Sosyal Medya Hesabı Ekle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                        <form asp-action="SosyalMedyaEkle" asp-controller="SosyalMedya" method="post">
+                            <div class="modal-body">
+                                <label>Platform</label>
+                                <input type="text" name="Ad" class="form-control" />
+                                <br />
+                                <label>Link</label>
+                                <input type="text" name="Link" class="form-control" />
+                                <br />
+                                <label>İkon Değeri</label>
+                                <input type="text" name="Icon" class="form-control" />
+                                <br />
+                                <button class="btn btn-info">Kaydet</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@model List<TblEgitimler>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Eğitimler Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Alt Başlık 2</th>
+        <th>GPA</th>
+        <th>Tarih</th>
+        <th style="width: 125px">Düzenle</th>
+        <th style="width: 90px">Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Baslik</td>
+            <td>@item.AltBaslik1</td>
+            <td>@item.AltBaslik2</td>
+            <td>@item.Gpa</td>
+            <td>@item.Tarih</td>
+            <td><a href="/Egitim/EgitimGetir/@item.Id" class="btn btn-warning"> <i class="fas fa-pencil-alt"></i> Düzenle</a></td>
+            <td><a href="/Egitim/EgitimSil/@item.Id" class="btn btn-danger"> <i class="fas fa-trash"></i> Sil</a></td>
+        </tr>
+    }
+</table>
+<a href="/Egitim/EgitimEkle/" class="btn btn-primary">Yeni Eğitim Ekle</a>

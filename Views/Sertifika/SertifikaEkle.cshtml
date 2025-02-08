@@ -1,0 +1,26 @@
+﻿@model TblSertifikalar
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Sertifika Ekle</h2>
+<br />
+<form asp-action="SertifikaEkle" asp-controller="Sertifika" method="post">
+    <div>
+        <label asp-for="Kaynak" class="form-label"></label>
+        <input asp-for="Kaynak" class="form-control" placeholder="Kaynak Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Aciklama" class="form-label">Açıklama</label>
+        <input asp-for="Aciklama" class="form-control" placeholder="Açıklama Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Tarih" class="form-label"></label>
+        <input asp-for="Tarih" class="form-control" placeholder="Tarih Giriniz.." />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+

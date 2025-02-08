@@ -1,0 +1,21 @@
+﻿@model TblYetenekler
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yeni Yetenek Ekle</h2>
+<br />
+<form asp-action="YetenekEkle" asp-controller="Yetenek" method="post">
+    <div>
+        <label asp-for="Yetenek" class="form-label"></label>
+        <input asp-for="Yetenek" class="form-control" placeholder="Yetenek Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Oran" class="form-label"></label>
+        <input asp-for="Oran" class="form-control" placeholder="Oran Giriniz.." />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+

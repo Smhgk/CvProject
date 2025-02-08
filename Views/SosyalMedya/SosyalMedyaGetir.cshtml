@@ -1,0 +1,26 @@
+﻿@model TblSosyalMedya
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Sosyal Medya Düzenle</h2>
+<br />
+<form asp-action="SosyalMedyaGetir" asp-controller="SosyalMedya" method="post">
+    <div>
+        <label asp-for="Ad" class="form-label"></label>
+        <input asp-for="Ad" class="form-control" placeholder="Platform Adı Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Link" class="form-label"></label>
+        <input asp-for="Link" class="form-control" placeholder="Link Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Icon" class="form-label">İkon Değeri</label>
+        <input asp-for="Icon" class="form-control" placeholder="İkon Değeri Giriniz.." />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+

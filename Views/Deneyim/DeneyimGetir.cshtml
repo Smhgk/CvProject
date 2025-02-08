@@ -1,0 +1,36 @@
+﻿@model TblDeneyimler
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Deneyim Güncelleme</h2>
+<br />
+<form asp-action="DeneyimGetir" asp-controller="Deneyim" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="Baslik" class="form-label">Başlık</label>
+        <input asp-for="Baslik" class="form-control" placeholder="Başlığı Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="AltBaslik" class="form-label">Alt Başlık</label>
+        <input asp-for="AltBaslik" class="form-control" placeholder="Alt Başlığı Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Tarih" class="form-label">Tarih</label>
+        <input asp-for="Tarih" class="form-control" placeholder="Tarih Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Aciklama" class="form-label">Açıklama</label>
+        <textarea asp-for="Aciklama" class="form-control" placeholder="Açıklama Giriniz.." rows="5"></textarea>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-info">Güncelle</button>
+</form>
+
+
+

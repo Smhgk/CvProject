@@ -1,0 +1,21 @@
+﻿@model TblAdmin
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Admin Düzenle</h2>
+<br />
+<form asp-action="AdminGetir" asp-controller="Admin" method="post">
+    <div>
+        <label asp-for="KullaniciAdi" class="form-label">Kullanıcı Adı</label>
+        <input asp-for="KullaniciAdi" class="form-control" placeholder="Kullanıcı Adı Giriniz.." />
+    </div>
+    <br />
+    <div>
+        <label asp-for="Sifre" class="form-label">Şifre</label>
+        <input asp-for="Sifre" class="form-control" placeholder="Şifre Giriniz.." />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
+
