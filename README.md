@@ -1,6 +1,7 @@
 # CvProject
+--Dynamic ASP.NET Core Project with Admin Panel--
 
-CvProject ASP.Net Core ile geliştirmiş olduğum kişilerin kendi öz geçmişlerini paylaşabilecekleri admin paneli sayesinde dinamik bir biçimde bu bilgileri değiştirebileceği ve yeni bilgiler ekleyebileceği bir projedir.
+CvProject ASP.NET Core ile geliştirmiş olduğum kişilerin kendi öz geçmişlerini paylaşabilecekleri admin paneli sayesinde dinamik bir biçimde bu bilgileri değiştirebileceği ve yeni bilgiler ekleyebileceği bir projedir.
 
 -Öz geçmiş bilgilerinin yer aldığı sayfa tek View dosyası üzerinden geliştirilmiştir. Hakkimda, Deneyimler gibi bilgiler PartialView yardımıyla ana view içerisinde çağrılmıştır.
 
